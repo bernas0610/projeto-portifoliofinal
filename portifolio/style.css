@@ -12,7 +12,7 @@
       color: #fff;
     }
 
-    /* Smooth scroll for in-page navigation */
+   
     html {
       scroll-behavior: smooth;
     }
@@ -23,9 +23,10 @@
       text-align: center;
       font-size: 28px;
       letter-spacing: 2px;
+      font-family:"orbitron"
     }
 
-/* Header layout and nav */
+
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -278,3 +279,4 @@ a, a:visited, a:active {
   from { opacity: 1; transform: translateY(0) scale(1); }
   to   { opacity: 0; transform: translateY(6px) scale(0.98); }
 }
+
