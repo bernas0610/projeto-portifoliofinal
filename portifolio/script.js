@@ -3,7 +3,7 @@ const form = document.getElementById("formulario");
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // Limpa mensagens
+      
       document.getElementById("erro-nome").textContent = "";
       document.getElementById("erro-email").textContent = "";
       document.getElementById("erro-mensagem").textContent = "";
@@ -75,21 +75,22 @@ function showToast(options) {
 
   container.appendChild(toast);
 
-  // Auto dismiss
+ 
   const duration = typeof options.duration === 'number' ? options.duration : 3500;
   let hideTimeout = setTimeout(() => removeToast(toast), duration);
 
-  // Manual close
+ 
   closeBtn.addEventListener('click', () => {
     clearTimeout(hideTimeout);
     removeToast(toast);
   });
 
-  // Remove with animation
+ 
   function removeToast(el) {
     el.style.animation = 'toast-out 240ms ease forwards';
     el.addEventListener('animationend', () => {
       if (el.parentNode) el.parentNode.removeChild(el);
     });
   }
+
 }
