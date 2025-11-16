@@ -1,0 +1,280 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "rajdhani";
+    }
+
+
+
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    /* Smooth scroll for in-page navigation */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #111;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+/* Header layout and nav */
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.brand {
+  font-size: 20px;
+  margin: 0;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.14s, color 0.14s;
+}
+.main-nav a:hover {
+  background: rgba(255,255,255,0.04);
+}
+.main-nav a:focus {
+  outline: 2px solid rgba(65,83,255,0.25);
+  outline-offset: 2px;
+}
+    footer {
+      background-color: #111;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .perfil img {
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      ;
+      margin-bottom: 15px;
+    }
+
+    .perfil h2 {
+      font-size: 22px;
+    }
+
+    .perfil p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .skills, .projetos, .contato {
+      margin-top: 40px;
+    
+      
+    }
+    
+    .skills h3, .projetos h3, .contato h3{
+      font-family: "orbitron";
+    }
+
+
+    .card {
+        transition: transform 0.2s;
+    }
+
+    
+
+    .card:hover {
+        transform: scale(1.05);
+    }   
+
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .card {
+      background-color: #4153ff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .card h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+    }
+
+    
+    form {
+      
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 350px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #20b858;
+    }
+
+    .erro {
+      color: red;
+      font-size: 13px;
+    }
+    .card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+a, a:visited, a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Toast notification styles */
+#toast-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toast {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 280px;
+  max-width: 360px;
+  background: linear-gradient(135deg, #232323, #2b2b2b);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  transform-origin: right bottom;
+  animation: toast-in 320ms ease forwards;
+}
+
+.toast .icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #34d399, #10b981);
+  color: #062018;
+  font-weight: 700;
+}
+
+.toast .content {
+  flex: 1;
+}
+
+.toast .title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.toast .message {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.toast .close-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes toast-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 0; transform: translateY(6px) scale(0.98); }
+}
